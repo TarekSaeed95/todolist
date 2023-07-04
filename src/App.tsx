@@ -1,18 +1,17 @@
-import { FC } from "react"
-import Controller from "./components/Controller"
-import Tasks from "./components/Tasks"
-import TodoListProvider from "./context/todolistContext"
+import { FC } from "react";
+import Controller from "./components/Controller";
+import Tasks from "./components/Tasks";
+import TodoListProvider from "./context/todolistContext";
 
-
-const App :FC = () => {
+const App: FC = () => {
   return (
-    <main>  
+    <main>
       <TodoListProvider>
-      <Controller/>
-      <Tasks/>
+        <Controller />
+        <Tasks />
       </TodoListProvider>
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;

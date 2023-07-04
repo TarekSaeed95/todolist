@@ -11,9 +11,10 @@ const TaskItem = ({ taskData }: { taskData: ITask }) => {
   const { id, text, completed } = taskData;
   const [isEditing, setIsEditing] = useState<boolean>(false);
   return (
-    <>
+    <div className="task">
       {!isEditing ? (
         <div
+        className="content"
           onClick={() => toggler(id)}
           style={{ textDecoration: completed ? "line-through" : "none" }}
         >
@@ -28,7 +29,7 @@ const TaskItem = ({ taskData }: { taskData: ITask }) => {
       )}
       <button onClick={() => deleteTask(id)}>Delete</button>
       <button onClick={() => setIsEditing((prev) => !prev)}>Edit Task</button>
-    </>
+    </div>
   );
 };
 
